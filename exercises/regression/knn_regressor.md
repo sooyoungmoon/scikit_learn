@@ -55,7 +55,7 @@ scaler = StandardScaler()
 X_train = scaler.fit_transform(X_train)
 X_test = scaler.transform(X_test)
 ```
-
+전처리를 통해 학습 데이터와 테스트 데이터를 정규분포로 변환 (정규화)  
 ### 5. Create and Train the KNN Regressor
 ```python
 # Create and train the KNN regressor
@@ -78,6 +78,8 @@ r2 = r2_score(y_test, y_pred)
 print(f'Mean Squared Error: {mse}')
 print(f'R-squared: {r2}')
 ```
+Mean Squared Error: 3047.449887640449  
+R-squared: 0.42480887066066253  
 
 ### 8. Visualize the Results
 ```python
