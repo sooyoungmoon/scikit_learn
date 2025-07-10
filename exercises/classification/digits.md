@@ -74,5 +74,5 @@ for ax, image, prediction in zip(axes, X_test, predicted):
     ax.imshow(image, cmap=plt.cm.gray_r, interpolation="nearest")
     ax.set_title(f"Prediction: {prediction}")
 ```
-![](exercises/classification/sphx_glr_plot_digits_classification_002.png)
+![](https://scikit-learn.org/stable/_images/sphx_glr_plot_digits_classification_002.png))
 
