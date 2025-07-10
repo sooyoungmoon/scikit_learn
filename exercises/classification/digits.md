@@ -76,3 +76,33 @@ for ax, image, prediction in zip(axes, X_test, predicted):
 ```
 ![](https://scikit-learn.org/stable/_images/sphx_glr_plot_digits_classification_002.png))
 
+8. 모델 성능 평가 (분류 성능)
+```python
+print(
+    f"Classification report for classifier {clf}:\n"
+    f"{metrics.classification_report(y_test, predicted)}\n"
+)
+```
+
+```
+Classification report for classifier SVC(gamma=0.001):
+              precision    recall  f1-score   support
+
+           0       1.00      0.99      0.99        88
+           1       0.99      0.97      0.98        91
+           2       0.99      0.99      0.99        86
+           3       0.98      0.87      0.92        91
+           4       0.99      0.96      0.97        92
+           5       0.95      0.97      0.96        91
+           6       0.99      0.99      0.99        91
+           7       0.96      0.99      0.97        89
+           8       0.94      1.00      0.97        88
+           9       0.93      0.98      0.95        92
+
+    accuracy                           0.97       899
+   macro avg       0.97      0.97      0.97       899
+weighted avg       0.97      0.97      0.97       899
+```
+- accuracy: 모든 class 에 대한 예측 중 실제와 일치한 예측의 비율 (single value for a test)
+- precision: 각 class 마다 해당 class에 대한 예측이 일치한 비율
+- recall: 각 class 마다 해당 class 데이터가 올바르게 예측된 비율
